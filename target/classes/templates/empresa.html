@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+  </head>
+  <body>
+    <h1>Página da Empresa - Listar Empresas</h1>
+    <table border="1">
+       <tr>
+          <td>Código Empresa</td>
+          <td>Empresa</td>
+          <td>Responsável</td>
+          <td>CNPJ</td>
+       </tr>
+       <tr th:each="emp : ${listaEmpresas}">
+          <td th:text="${emp.id}"></td>
+          <td th:text="${emp.nome}"></td>
+          <td th:text="${emp.responsavel}"></td>
+          <td th:text="${emp.cnpj}"></td>
+       </tr>
+    </table>
+  </body>
+</html>

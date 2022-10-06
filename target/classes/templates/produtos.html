@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+  </head>
+  <body>
+    <h1>Página da Empresa - Listar Produtos</h1>
+    <table border="1">
+       <tr>
+          <td>Código Produto</td>
+          <td>Produto</td>
+       </tr>
+       <tr th:each="emp : ${listaProdutos}">
+          <td th:text="${emp.id}"></td>
+          <td th:text="${emp.nome}"></td>
+       </tr>
+    </table>
+  </body>
+</html>
